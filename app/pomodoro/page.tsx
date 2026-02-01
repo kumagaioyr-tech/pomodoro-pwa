@@ -226,9 +226,14 @@ export default function PomodoroPage() {
 
   const [secondsLeft, setSecondsLeft] = useState(phaseTotalSeconds);
 
+  const prevPhaseRef = useRef<Phase>("work");
+  
   useEffect(() => {
-    if (!isRunning) setSecondsLeft(phaseTotalSeconds);
-  }, [phaseTotalSeconds, isRunning]);
+    if (prevPhaseRef.current !== phase) {
+        prevPhaseRef.current = phase;
+        setSecondsLeft(phaseTotalSeconds);
+    }
+}, [phase, phaseTotalSeconds]);
 
   const intervalRef = useRef<number | null>(null);
   const clearTimer = () => {
