@@ -755,24 +755,6 @@ export default function PomodoroPage() {
             </div>
           </div>
         </div>
-
-        <div
-          style={{
-            position: "fixed",
-            bottom: 10,
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            fontSize: 12,
-            opacity: 0.70,
-            color: "rgba(255,255,255,0.80)",
-            zIndex: 2,
-            textShadow: "0 10px 45px rgba(0,0,0,0.55)",
-            paddingBottom: "env(safe-area-inset-bottom)",
-          }}
-        >
-          Tip: 背景×アクセント×ノイズ量を決めると“アプリ感”が跳ねる。
-        </div>
       </div>
     </div>
   );
